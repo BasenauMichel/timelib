@@ -32,11 +32,12 @@ int is_leapyear(int year)
     }
 }
 
-//This function has 2 parameter of the type integer and returns an integer.
-//This function checks the month and returns a -1, if the month is incorrect.
-//Then it declares an array, with 12 values standing for days of the months in chronological order.
-//After testing if the entered year is a leap year, by calling another function, it changes the February, if its a leap year.
-//This function returns the amount of days, of the entered month.
+/*This function has 2 parameter of the type integer and returns an integer.
+/This function checks the month and returns a -1, if the month is incorrect.
+/Then it declares an array, with 12 values standing for days of the months in chronological order.
+/After testing if the entered year is a leap year, by calling another function, it changes the February, if its a leap year.
+/This function returns the amount of days, of the entered month.
+*/
 int get_days_for_month(int month, int year)
 {
     if (month < 1 || month > 12)
@@ -47,8 +48,8 @@ int get_days_for_month(int month, int year)
     {
         if (is_leapyear(year) == 1)
         {
-             int days[12] = {31,29,31,30,31,30,31,31,30,31,30,31};
-             return days[month-1];
+            int days[12] = {31,29,31,30,31,30,31,31,30,31,30,31};
+            return days[month-1];
         }
         else
         {
@@ -91,7 +92,21 @@ int day_of_the_year(int day, int month, int year)
 
     }
 }
+//This function has no return value
+//The 3 parameters form a day, split into day, month and year.
+//They are pointer, so they are able to change other variables which are given to the function as a reference
+//This function reads dates until a date is entered correct
+void input_date(int *dayPointer, int *monthPointer, int *yearPointer){
+    do{
+    printf("Day:");
+    scanf("%i", &*dayPointer);
+    printf("Month:");
+    scanf("%i", &*monthPointer);
+    printf("Year:");
+    scanf("%i", &*yearPointer);
+    }while(exist_date(*dayPointer, *monthPointer, *yearPointer) == 0);
 
+}
 
 
 
