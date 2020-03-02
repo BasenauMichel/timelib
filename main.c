@@ -17,13 +17,11 @@ int main()
 
 //Declaring and Initializing needed Variables
     int dayOfYear;
-    int year = 0;
-    int month = 0;
-    int day = 0;
+    struct date date1;
 //Calling InputYear Function to read and check a year, entered by the user
-    input_date(&day, &month, &year);
+    date1 = input_date();
 //Calling DayofYear-Function of the Library timelib.h, which returns the No. of the Day, calculated with the parameters day, month and year
-    dayOfYear = day_of_the_year(day, month, year);
+    dayOfYear = day_of_the_year(date1);
 
     printf("No. of the Day :%i", dayOfYear);
 
