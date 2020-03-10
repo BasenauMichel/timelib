@@ -1,11 +1,12 @@
 #ifndef TIMELIB_H_INCLUDED
 #define TIMELIB_H_INCLUDED
 
-struct date {
+struct date
+{
     int day;
     int month;
     int year;
-    };
+};
 
 int is_leapyear(int year);
 int get_days_for_month(struct date enteredDate);

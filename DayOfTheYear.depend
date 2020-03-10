@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1583157178 source:d:\git\timelib\timelib.c
+1583824674 source:d:\git\timelib\timelib.c
 	"timelib.h"
 
-1583157120 source:d:\git\timelib\main.c
+1583157208 source:d:\git\timelib\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>

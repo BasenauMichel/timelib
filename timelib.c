@@ -97,9 +97,7 @@ int day_of_the_year(struct date enteredDate)
     }
 }
 //This function has no return value
-//The 3 parameters form a day, split into day, month and year.
-//They are pointer, so they are able to change other variables which are given to the function as a reference
-//This function reads dates until a date is entered correct
+//This function reads dates, by using struct date, which is declared in the header, until a date is entered correct
 struct date input_date()
 {
     struct date enteredDate;
